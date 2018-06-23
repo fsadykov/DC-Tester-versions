@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://www.evolvecyber.com/assets/images/favicon.ico" />
+<link rel="stylesheet" href="/static/dashboard/top.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/scrol-servers.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/table.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/footler.css" type="text/css">
+
+<div class="topnav">
+  <a class="active" href="{{ url_for('logout') }}">logout</a>
+  <a href="#about">About</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('check') }}">Check</a>
+  <a href="{{ url_for('dashboard') }}">Dashboard</a>
+
+
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"/i>Search</button>
+    </form>
+  </div>
+</div>
+</head>
+<center>
+<div class="ssh-copy">
+  <h1>Please copy this ssh-id and add each Machine</h1>
+  <a href="{{ url_for('sshcopy') }}">Click here more information</a>
+  <br>
+  <input type="text" value="echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5AvAuNdI1cLpL+0voRkbVziels0EyX1uZDtT5jdtAEQ64khJjQALTr9AFUso0YkJg6ASBI0uxMD8fWLmoQMsh14hvOl3dVJ3f2+oyoYcRkTY3eEUxnWIGViugoFQgHlJzkSvlGzGiPZ+uczmxW6Eqnn3fSZey8dT6MFBo/gBOf9HqNXb8sZegwXdLS9XlfNvo4xjIzFzqe6wTvCcQMENfA4L5bgWQVy2kcyXKTNBgBLGxetC5g64O3z4KTaVFlKD0m8eOJZ+YLlnK4koVi4YGP4EDBIBdhdSwCULgACIbtCTDUB7hj9MpblCDPfNMKnP0AO2GeKZ0xOfJjXiW2wR1 root@localhost.localdomain' >> ~/.ssh/authorized_keys"id="myInput">
+  <button onclick="myFunction()">Copy ID</button>
+</div>
+  </center>
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+  <div class="scrolling-wrapper-flexbox">
+      <div class="card">
+        <img src="{{url_for('static', filename='images/repository.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Repository</h4>
+        <form method="POST">
+          <input type="text" name="repoip" placeholder="Please enter your IP">
+          <input type="submit">
+        </form>
+      </div>
+
+      <div class="card">
+        <img src="{{url_for('static', filename='images/dns-server.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>DNS Master</h4>
+        <form method="POST">
+          <input type="text" name="dnsip" placeholder="Please enter your IP">
+          <input type="submit">
+        </form>
+      </div>
+
+
+      <div class="card">
+        <img src="{{url_for('static', filename='images/mysql.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>MYSQL</h4>
+        <form method="POST">
+          <input type="text" name="ipmysql" placeholder="Please enter your IP">
+          <input type="submit">
+        </form>
+      </div>
+
+
+      <div class="card">
+        <img src="{{url_for('static', filename='images/mail-server.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Mail Server</h4>
+        <form method="POST">
+          <input type="text" name="mailip" placeholder="Please enter your IP">
+          <input type="submit">
+        </form>
+       </div>
+
+       <div class="card">
+         <img src="{{url_for('static', filename='images/nagios.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+         <h4>Nagios</h4>
+         <form method="POST">
+           <input type="text" name="nagiosip" placeholder="Please enter your IP">
+           <input type="submit">
+         </form>
+        </div>
+
+       <div class="card">
+        <img src="{{url_for('static', filename='images/webserver.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+        <h4>Web Server</h4>
+        <form method="POST">
+          <input type="text" name="webip" placeholder="Please enter your IP">
+          <input type="submit">
+        </form>
+       </div>
+
+      <div class="card">
+       <img src="{{url_for('static', filename='images/ansible.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+       <h4>Ansible</h4>
+       <form method="POST">
+         <input type="text" name="ansible" placeholder="Please enter your IP">
+         <input type="submit">
+       </form>
+      </div>
+
+      <div class="card">
+       <img src="{{url_for('static', filename='images/nfs-server.png')}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+       <h4>NFS Server</h4>
+       <form method="POST">
+         <input type="text" name="ipnfs" placeholder="Please enter your IP">
+         <input type="submit">
+       </form>
+      </div>
+  </div>
+<h2 class="sub-header">Results</h2>
+
+<body>
+<table>
+<tr>
+  <th>Company</th>
+  <th>Contact</th>
+  <th>Country</th>
+</tr>
+<tr>
+  <td>Alfreds Futterkiste</td>
+  <td>Maria Anders</td>
+  <td>Germany</td>
+</tr>
+<tr>
+  <td>Centro comercial Moctezuma</td>
+  <td>Francisco Chang</td>
+  <td>Mexico</td>
+</tr>
+<tr>
+  <td>Ernst Handel</td>
+  <td>Roland Mendel</td>
+  <td>Austria</td>
+</tr>
+<tr>
+  <td>Island Trading</td>
+  <td>Helen Bennett</td>
+  <td>UK</td>
+</tr>
+<tr>
+  <td>Island Trading</td>
+  <td>Helen Bennett</td>
+  <td>UK</td>
+</tr>
+<tr>
+  <td>Island Trading</td>
+  <td>Helen Bennett</td>
+  <td>UK</td>
+</tr>
+<tr>
+  <td>Laughing Bacchus Winecellars</td>
+  <td>Yoshi Tannamuri</td>
+  <td>Canada</td>
+</tr>
+<tr>
+  <td>Magazzini Alimentari Riuniti</td>
+  <td>Giovanni Rovelli</td>
+  <td>Italy</td>
+</tr>
+</table>
+
+</body>
+
+<footer class="footer">
+  <p>&copy; Evolve Cyber 2018</p>
+</footer>
+</html>
