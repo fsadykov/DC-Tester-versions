@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://www.evolvecyber.com/assets/images/favicon.ico" />
+<link rel="stylesheet" href="/static/dashboard/top.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/scrol-servers.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/table.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/footler.css" type="text/css">
+<link rel="stylesheet" href="/static/dashboard/menu.css" type="text/css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="topnav">
+  <a class="active" href="{{ url_for('logout') }}">logout</a>
+  <a href="{{ url_for('raiting') }}">Raiting</a>
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+</div>
+</div>
+
+
+<h2>Welcome to my Videos {{ name }} </h2>
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="{{ url_for('dashboard') }}">Dashboard</a>
+  <a href="{{ url_for('videos') }}">Videos</a>
+  <a href="{{ url_for('contact') }}">Contact me</a>
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+<center>
+
+<div class="scrolling" style="overflow-x:auto;">
+    <div class="card">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/i7_JEhQe-08" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3DmKReWiOl8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TiFBHEyyZCo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ILN3GXz0x2I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/d9S3ekgrCmA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tuDPVuOuJcA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s08QnDSSyio" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tA2iqD4hfQE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4KMRiD32f1Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IojeE01EXOE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jbI4_w2pNKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+</div>
+</center>
+
+
+
+
+
+
+
+<footer class="footer">
+  <p>&copy; Farkhod Sadykov 2018</p>
+</footer>
+
+</html>

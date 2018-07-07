@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://www.evolvecyber.com/assets/images/favicon.ico" />
+<link rel="stylesheet" href="/static/dashboard/top.css" type="text/css">
+
+<div class="topnav">
+  <a class="active" href="{{ url_for('logout') }}">logout</a>
+  <a href="#about">About</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('check') }}">Check</a>
+  <a href="{{ url_for('dashboard') }}">Dashboard</a>
+
+
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"/i>Search</button>
+    </form>
+  </div>
+</div>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+
+</body>
+</html>
